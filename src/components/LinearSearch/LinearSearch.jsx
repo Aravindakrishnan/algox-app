@@ -7,6 +7,7 @@ export default function LinearSearch({array,searchItem,isVisualize}) {
     const [color,setColor]= useState([])
     // const [] {}
     useEffect(()=>{
+        
         let data= [];
 
         setTimeout(()=>{
@@ -16,24 +17,26 @@ export default function LinearSearch({array,searchItem,isVisualize}) {
             setColor(data)
         },2000)
 
-        console.log(data);
-
+        
         setTimeout(()=>{    
+
+            console.log(data);
+
+
             for(let i=0;i<array.length;i++){
                setTimeout(()=>{
                    if(array[i]===searchItem){
                        console.log(data[i])
                         data[i] = {color:'green'};
                         // setColor([...color,{color:'green'}])
-
+                        
                         // break;
-                        setColor(data)
-                    }
+                   }
                     else{
                         // setColor([...color,{color:'red'}])
                         data[i] = {color:'#d9376e'};
-                        setColor(data)
                     }
+                    setColor(data)
                     console.log('color', color)
                },500)
             //    console.log(data);
@@ -42,7 +45,7 @@ export default function LinearSearch({array,searchItem,isVisualize}) {
         },3000)
         // console.log('first')
 
-    },[isVisualize===true])
+    },[isVisualize])
     return(
         <div style={{display:"flex",flexWrap: "wrap"}} className="container">
             {array.map((item,index) => {
@@ -52,7 +55,8 @@ export default function LinearSearch({array,searchItem,isVisualize}) {
                             <div style={{fontSize: "1.8rem"}} className="ls__cursor">
                             👇🏻
                             </div>
-                            <Cell key={`${item}:${index}`} item={item} index={index} variant={color[index]?.color} />
+                            
+                            (<Cell key={`${item}:${index}`} item={item} index={index} variant={color[index]?.color} />)
                         </div>
                         </React.Fragment>
                     )
