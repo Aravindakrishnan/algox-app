@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {useLocation, useParams} from "react-router-dom";
-import BinarySearch from "../../BinarySearch/BinarySearch";
+import BinarySearch from "../BinarySearch/BinarySearch";
 import LinearSearch from "../LinearSearch/LinearSearch";
 
 import "./VisualizeComponent.css";
@@ -14,6 +14,7 @@ export default function VisualizeComponent() {
     const [searchItem,setSearchItem] = useState("");
     const [algorithmName,setAlgorithmName] = useState(path.innerType.toLowerCase())
     // const algorithms = ["linearsearch","bubblesort"]
+    // const [isStarted,setIsStarted] = useState(false);
     const onSubmit = () => {
         try 
         {
@@ -39,7 +40,7 @@ export default function VisualizeComponent() {
                 {
                     (active && algorithmName == "linearsearch" ? 
                         
-                         <LinearSearch array={array} searchItem={searchItem} isVisualize={false} ></LinearSearch> : "") 
+                         <LinearSearch isStarted={false} array={array} searchItem={searchItem} isVisualize={false} ></LinearSearch> : "") 
                 }
 
                 {

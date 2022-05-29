@@ -1,4 +1,4 @@
-import Cell from "../components/Cell/Cell"
+import Cell from "../Cell/Cell"
 
 export default function BinarySearch({array,searchItem}) {
     return(

@@ -25,7 +25,9 @@
 
 .visz__box {
     flex: 1;
-    padding: 5rem;
+    padding: 5
+    
+    rem;
     background: var(--background);
     text-align: center;
     display: flex;

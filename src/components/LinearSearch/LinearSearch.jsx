@@ -5,6 +5,7 @@ export default function LinearSearch({array,searchItem,isVisualize}) {
     // const [itemx,setItemx] = useState([]);
     // const {danger} = {""} -> red checking blue green
     const [color,setColor]= useState([])
+
     // const [] {}
     useEffect(()=>{
         
@@ -55,8 +56,8 @@ export default function LinearSearch({array,searchItem,isVisualize}) {
                             <div style={{fontSize: "1.8rem"}} className="ls__cursor">
                             👇🏻
                             </div>
-                            
-                            (<Cell key={`${item}:${index}`} item={item} index={index} variant={color[index]?.color} />)
+
+                            <Cell key={`${item}:${index}`} item={item} index={index} variant={color[index]?.color} />
                         </div>
                         </React.Fragment>
                     )

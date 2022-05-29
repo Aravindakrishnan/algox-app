@@ -8,19 +8,16 @@ function Cell({item,index,variant}) {
     useEffect(()=> {
 
         setTimeout(()=> {
-            setColor([...color,{ color : variant }])
-        },1000 * index);
-        console.log(color)
+            setColor("#fff")
+        },1000);
 
     },[])
-
-
 
     const visibility = (color==="#fff" ? "visible" : "hidden" );
     
     return (
         <div style={{ visibility : visibility}} className="cell_container">
-      <div style={{backgroundColor:color[index]?.color}} className="cell__item">
+      <div style={{backgroundColor:variant}} className="cell__item">
                 {item}
             </div>
             <div className="cell__index">

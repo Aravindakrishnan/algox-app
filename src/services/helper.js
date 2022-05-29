@@ -47,3 +47,9 @@ export const newTrace = (array) => {
   export const createKey = (groupA, groupB, groupC, groupD) => {
     return { groupA, groupB, groupC, groupD };
   };
+
+export default function showComponent({component}) {
+    setTimeout(()=> {
+        return component;
+    },1000) 
+}
