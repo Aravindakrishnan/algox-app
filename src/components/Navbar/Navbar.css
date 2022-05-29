@@ -1,0 +1,16 @@
+.navbar {
+    padding: 1.8rem;
+    background: var(--cardbg);
+    color: var(--color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__title {
+    color: var(--color);
+}
+.navbar__icon {
+    display: inline-block;
+    font-size: 1.8rem;
+}

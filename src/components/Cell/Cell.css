@@ -1,0 +1,27 @@
+.cell-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: 0.9s;
+}
+
+.cell__item {
+    border: 1px solid #fefefe;
+    display: inline-block;
+    margin: 1.2rem;
+    transition: 0.9s;
+    border-radius: 0.2rem;
+}
+
+.cell__item , .cell__index {
+    padding: 1.8rem;
+    color: var(--color);
+    font-size: 2.2rem;
+}
+
+.cell__item {
+    background: var(--cardbg);
+    color:var(--color);
+}

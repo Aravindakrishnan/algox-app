@@ -1,0 +1,144 @@
+.visz__title {
+    color:#fefefe;
+    padding-bottom: 1.2rem;
+}
+
+.visualize-container {
+    
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    color: #fefefe;
+
+}
+
+.visz__box , .visz__code , .visz__input , .visz__debug {
+    /* border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #DD2476, #FF512F) 1;
+    border-radius: 1.6rem;
+    background: #16161a;
+    border-radius: 0.4rem; */
+    /* box-shadow: inset 25px -25px 35px #0b0b0d,
+            inset -25px 25px 35px #212127; */
+}
+
+.visz__box {
+    flex: 1;
+    padding: 5rem;
+    background: var(--background);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 40px 40px 80px var(--background),
+            inset -40px -40px 80px var(--background);
+    border:1px solid var(--background);
+}
+
+.visz__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem 0;
+}
+
+.visz__logs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visz__code {
+    width: 80vw;
+    text-align: center;
+    padding: 12rem;
+    background: #16161a;
+    margin: 0 1.2rem;
+}
+
+
+.visz__input {
+    width: 100%;
+    flex: 1;
+    background: var(--background);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    flex-direction: column;
+    flex: 1;
+    border: none;
+}
+
+.visz__array , .visz__item {
+    width: 100%;
+    padding: 2.2rem;
+    font-size: 1.6rem;
+    outline: none;
+    /* border: none; */
+    background: var(--background);
+    color: var(--color);
+    border: none;
+    outline: none;
+    /* box-shadow: inset 25px -25px 35px #0b0b0d,
+            inset -25px 25px 35px #212127; */
+}
+
+.visz__array::placeholder , .visz__item::placeholder {
+    color: #94a1b2;
+}
+
+.visz__debug {
+    display: block;
+    width: 600px;
+    background: var(--background);
+    text-align: center;
+    color: #fefefe;
+    transition: 0.3s;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    padding: 1.8rem 2.8rem;
+    display: block;
+    border-radius: 0.7rem;
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.visz__debug:active {
+    transform: scale(0.96);
+}
+
+.keyword {
+    color: rgb(255, 148, 148);
+}
+
+.code {
+    font-size: 1.8rem;
+}
+
+.message {
+    font-size: 1.8rem;
+    color: #94a1b2;
+}
+
+@media screen and (max-width:600px) {
+    .visz__container {
+        flex-direction: column;
+    }
+    .visz__code {
+        width: 100%;
+        margin: 0;
+    }
+    .visz__logs {
+        width: 100%;
+    }
+    .visz__input , .visz__debug {
+        width: 100%;
+        padding: 1.8rem;
+        margin: 1.2rem;
+    }
+}
